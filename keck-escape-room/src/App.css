@@ -17,7 +17,7 @@
 
 header {
   background-color: black;
-  background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+  background-image: radial-gradient(rgba(0, 120, 0, 1), black 80%);
   height: 100vh;
   font-size: large;
   color: white;
@@ -31,13 +31,16 @@ header {
   font-family: inherit;
   padding: 30px;
   letter-spacing: 8px;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s cubic-bezier(1, 0, 0, 1);
+  border-radius: 4px;
   background-image: url("./codeGif.gif");
 }
 
 .logInButton:hover {
   color: white;
-  transition: 0.6s ease-in;
+  transition: 1s ease-out;
+  width: 450px;
+  font-size: 40px;
 }
 
 .App-header {
