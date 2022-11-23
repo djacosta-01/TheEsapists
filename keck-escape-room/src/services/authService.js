@@ -1,30 +1,25 @@
 import { useState, useEffect } from "react";
+import "./authService.css";
 import { signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 import { auth } from "../firebaseConfig";
 
 export function SignIn() {
   return (
-    <div>
-      Welcome! Enter below, if you dare.
+    <div id="signInContainer">
+      <p>Welcome! Enter below, if you dare. </p>
       <button
         onClick={() => signInWithPopup(auth, new GoogleAuthProvider())}
-        className="logInButton"
+        id="logInButton"
       >
         Enter the depths of the Keck Lab
       </button>
-      {/* <button
-        id="signIn"
-        onClick={() => signInWithPopup(auth, new GoogleAuthProvider())}
-      >
-        Sign In
-      </button> */}
     </div>
   );
 }
 
 export function SignOut() {
   return (
-    <div>
+    <div id="signOutContainer">
       Hello, {auth.currentUser.displayName} &nbsp;
       <button onClick={() => signOut(auth)}>Sign Out</button>
     </div>
