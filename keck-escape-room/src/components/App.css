@@ -4,19 +4,20 @@ body {
   margin: 0;
 }
 
-/* .App {
-  background-color: blue;
-} */
-#App-header {
+.App {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding-top: 20px;
+  height: 100vh;
+  background-color: blue;
   justify-content: flex-start;
   align-items: center;
   background-color: black;
   background-image: radial-gradient(rgba(0, 120, 0, 1), black 80%);
-  height: 100vh;
+}
+
+#App-header {
+  padding-top: 20px;
   font-size: large;
   color: white;
   font-family: "Press Start 2P";
