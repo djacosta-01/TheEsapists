@@ -4,11 +4,15 @@ body {
   margin: 0;
 }
 
+/* .App {
+  background-color: blue;
+} */
 #App-header {
   display: flex;
   flex-direction: column;
   margin: 0;
-  justify-content: center;
+  padding-top: 20px;
+  justify-content: flex-start;
   align-items: center;
   background-color: black;
   background-image: radial-gradient(rgba(0, 120, 0, 1), black 80%);

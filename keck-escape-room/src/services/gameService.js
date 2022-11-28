@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
+import { SignOut } from "./authService";
 
-export function Game() {
+export function GamePage() {
   return (
-    <div id="game_one">
+    <div id="test-game">
+      <SignOut />
       <p>Game 1</p>
     </div>
   );
