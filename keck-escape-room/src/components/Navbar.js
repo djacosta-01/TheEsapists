@@ -1,5 +1,7 @@
 export default function NavBar() {
-  <nav>
-    <a href="#">Home</a>
-  </nav>;
+  return (
+    <nav>
+      <a href="#">Home</a>
+    </nav>
+  );
 }

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./authService.css";
 import { signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 import { auth } from "../firebaseConfig";
+import Navbar from "../components/Navbar";
 
 export function SignIn() {
   return (
@@ -20,6 +21,7 @@ export function SignIn() {
 export function SignOut() {
   return (
     <div id="signOutContainer">
+      <Navbar />
       Hello, {auth.currentUser.displayName} &nbsp;
       <button onClick={() => signOut(auth)}>Sign Out</button>
     </div>
