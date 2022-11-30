@@ -1,9 +1,10 @@
-div #nav-header {
+/* div #nav-header {
   background-color: aqua;
-}
 
-#nav-bar-container {
+} */
+
+div #nav-bar-container {
+  color: black;
   font-family: "Courier New", Courier, monospace;
-  background-color: lightgoldenrodyellow;
-  padding-top: 200px;
+  background-color: lightgreen;
 }
