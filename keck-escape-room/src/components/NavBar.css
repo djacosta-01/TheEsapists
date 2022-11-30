@@ -1,0 +1,9 @@
+div #nav-header {
+  background-color: aqua;
+}
+
+#nav-bar-container {
+  font-family: "Courier New", Courier, monospace;
+  background-color: lightgoldenrodyellow;
+  padding-top: 200px;
+}

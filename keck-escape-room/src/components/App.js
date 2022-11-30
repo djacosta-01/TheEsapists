@@ -7,10 +7,9 @@ function App() {
   const user = useAuthentication();
   return (
     <div className="App">
-      {/*Instead of <SignOut component, can make like a game service component which contains the sign out component */}
-      {/* SignOut can be in Navabar*/}
-      <header id="App-header">{!user ? <SignIn /> : <SignOut />}</header>
-      <GamePage username={user?.displayName} />
+      <header>{!user ? <SignIn /> : <SignOut />}</header>
+      {!user ? "" : <NavBar />}
+      {user ? <GamePage username={user?.displayName} /> : ""}
     </div>
   );
 }
