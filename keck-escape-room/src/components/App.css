@@ -5,13 +5,15 @@ body {
 }
 
 .App {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  /* display: grid;
   grid-template-rows: auto;
   grid-template-columns: auto auto auto;
   grid-template-areas:
     "header header header"
     ". . ."
-    ". . .";
+    ". . ."; */
   margin: 0;
   height: 100vh;
   justify-content: flex-start;
