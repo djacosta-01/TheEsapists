@@ -18,3 +18,24 @@ body {
   color: white;
   font-family: "Press Start 2P";
 }
+
+.signOutContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 1200px;
+  font-size: small;
+}
+
+button {
+  width: 150px;
+  font-size: small;
+  font-family: inherit;
+  transition: 0.8s ease;
+  border-radius: 4px;
+  background-image: url("../services/codeGif.gif");
+}
+
+button:hover {
+  color: white;
+  transition: 1s ease-out;
+}

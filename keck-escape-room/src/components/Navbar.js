@@ -3,9 +3,12 @@ import "./NavBar.css";
 export default function NavBar() {
   return (
     <div id="nav-bar-container">
-      This is the container div
-      {/* <a href="#">Home</a>
-        <a href="##">Load Game</a> */}
+      <a class="homeNav" href="#">
+        Home
+      </a>
+      <a class="loadGameNav" href="##">
+        Load Game
+      </a>
     </div>
   );
 }
