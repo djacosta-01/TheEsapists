@@ -5,8 +5,13 @@ body {
 }
 
 .App {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto auto;
+  grid-template-areas:
+    "header header header"
+    ". . ."
+    ". . .";
   margin: 0;
   height: 100vh;
   justify-content: flex-start;
@@ -18,3 +23,12 @@ body {
   color: white;
   font-family: "Press Start 2P";
 }
+
+header {
+  grid-area: header;
+  justify-self: center;
+}
+
+/* navbar {
+  grid-area: navbar;
+} */

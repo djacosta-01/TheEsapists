@@ -16,7 +16,7 @@ export function GamePage({ username }) {
 
   return (
     <div className="game-container">
-      <p>Game 1</p>
+      {/* <p>Game 1</p>
 
       <form id="name-form" onSubmit={submitName}>
         <input
@@ -26,13 +26,13 @@ export function GamePage({ username }) {
           value={nameEntry}
           onChange={(e) => setNameEntry(e.target.value)}
         />
-      </form>
+      </form> */}
 
-      {nameComparison ? (
+      {/* {nameComparison ? (
         <p className="blah">YOU HAVE ESCAPED!!</p>
       ) : (
         <p className="blah">Incorrect </p>
-      )}
+      )} */}
     </div>
   );
 }
