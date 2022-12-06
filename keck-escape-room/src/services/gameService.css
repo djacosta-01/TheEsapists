@@ -1,3 +1,4 @@
-.blah {
-  color: white;
+#sign-out-container {
+  display: flex;
+  justify-content: flex-end;
 }
