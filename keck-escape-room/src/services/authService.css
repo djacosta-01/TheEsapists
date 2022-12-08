@@ -14,7 +14,7 @@
   letter-spacing: 8px;
   transition: 0.4s cubic-bezier(1, 0, 0, 1);
   border-radius: 4px;
-  background-image: url("./codeGif.gif");
+  background-image: url("../images/codeGif.gif");
 }
 
 #logInButton:hover {

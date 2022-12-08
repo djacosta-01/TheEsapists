@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import "./authService.css";
 import { signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 import { auth } from "../firebaseConfig";
-// import Navbar from "../components/Navbar";
 
 export function SignIn() {
   return (

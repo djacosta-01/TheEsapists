@@ -1,20 +1,26 @@
-import { useState, useEffect } from "react";
-import NavBar from "../components/Navbar";
-import escapeRoom from "../components/escapeRoom.png";
-import "./gameService.css";
-import { SignOut } from "../services/authService";
+import { db } from "../firebaseConfig";
+import {
+  collection,
+  query,
+  getDocs,
+  addDoc,
+  orderBy,
+  limit,
+  Timestamp,
+} from "firebase/firestore";
 
-export function GamePage({ username }) {
-  return (
-    <div className="game-container">
-      <div id="sign-out-container">
-        <NavBar />
-        <SignOut />
-      </div>
-      <div id="map-container">
-        <img src={escapeRoom} alt="escape room" />
-        <p id="text">Welcome to Keck!! Escape if you can...</p>
-      </div>
-    </div>
+export async function createNewGame({ title }) {
+  const data = { title, date: Timestamp.now() };
+  const docRef = await addDoc(collection(db, "games"), data);
+  return { id: docRef.id, ...data };
+}
+
+export async function fetchGames() {
+  const snapshot = await getDocs(
+    query(collection(db, "games"), orderBy("date", "desc"), limit(10))
   );
+  return snapshot.docs.map((doc) => ({
+    id: doc.id,
+    ...doc.data(),
+  }));
 }
