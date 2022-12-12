@@ -19,8 +19,12 @@ export async function fetchGames() {
   const snapshot = await getDocs(
     query(collection(db, "games"), orderBy("date", "desc"), limit(10))
   );
-  return snapshot.docs.map((doc) => ({
+
+  let snapshotDocs = snapshot.docs.map((doc) => ({
     id: doc.id,
     ...doc.data(),
   }));
+  const formattedDate = snapshotDocs[0].date.toDate();
+  snapshotDocs[0].date = formattedDate;
+  return snapshotDocs;
 }

@@ -1,6 +1,7 @@
 export default function Game({ game }) {
   return (
     <div id="game-container">
+      This the game component
       {!game ? (
         <p>No game selected</p>
       ) : (
