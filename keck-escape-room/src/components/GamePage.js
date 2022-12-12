@@ -4,7 +4,7 @@ import escapeRoom from "../images/escapeRoom.png";
 import "./GamePage.css";
 import { SignOut } from "../services/authService";
 
-export function GamePage({ username }) {
+export default function GamePage({ username }) {
   return (
     <div className="game-container">
       <div id="map-container">

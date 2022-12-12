@@ -30,3 +30,11 @@ header {
   grid-area: header;
   justify-self: center;
 }
+
+#game-loader {
+  background-color: blue;
+}
+
+#game-container {
+  background-color: blueviolet;
+}

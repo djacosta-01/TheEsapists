@@ -1,8 +1,9 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import { GamePage } from "./GamePage";
+import GamePage from "./GamePage";
 import NavBar from "./Navbar";
 import LoadGame from "../services/LoadGame";
+import Game from "./Game";
 import { SignIn, SignOut, useAuthentication } from "../services/authService";
 import { createNewGame, fetchGames } from "../services/gameService";
 
@@ -41,6 +42,7 @@ function App() {
       </header>
       {!user ? "" : <GamePage username={user?.displayName} />}
       {!user ? "" : <LoadGame games={games} setGame={setGame} />}
+      {!user ? "" : <Game game={game} />}
     </div>
   );
 }
