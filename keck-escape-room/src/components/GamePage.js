@@ -6,11 +6,9 @@ import { SignOut } from "../services/authService";
 
 export default function GamePage({ username }) {
   return (
-    <div className="game-container">
-      <div id="map-container">
-        <img src={escapeRoom} alt="escape room" />
-        <p id="text">Welcome to Keck!! Escape if you can...</p>
-      </div>
+    <div id="map-container">
+      <img src={escapeRoom} alt="escape room" />
+      <p id="text">Welcome to Keck!! Escape if you can...</p>
     </div>
   );
 }

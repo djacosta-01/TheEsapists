@@ -5,19 +5,11 @@ body {
 }
 
 .App {
-  display: flex;
-  flex-direction: column;
-  /* display: grid;
-  grid-template-rows: auto;
+  display: grid;
+  grid-template-rows: auto auto auto;
   grid-template-columns: auto auto auto;
-  grid-template-areas:
-    "header header header"
-    ". . ."
-    ". . ."; */
   margin: 0;
   height: 100vh;
-  justify-content: flex-start;
-  align-items: center;
   background-color: black;
   background-image: radial-gradient(rgba(0, 120, 0, 1), black 80%);
   padding-top: 20px;
@@ -26,15 +18,41 @@ body {
   font-family: "Press Start 2P";
 }
 
-header {
-  grid-area: header;
+/* Load side bar */
+#game-loader {
+  grid-row: 1 / span 3;
+  /* background-color: blue; */
+}
+
+/* Game content */
+#game-container {
+  background-color: blueviolet;
+}
+
+/* Map placement */
+#map-container {
+  display: flex;
+  flex-direction: column;
+  grid-row: 2 / span 2;
+  grid-column: 2 / 2;
   justify-self: center;
 }
 
-#game-loader {
-  background-color: blue;
+/* Nav Bar */
+#nav-bar-container {
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  grid-row: 1 / span 1;
+  grid-column: 2 / 2;
 }
 
-#game-container {
-  background-color: blueviolet;
+/* Sign Out */
+#signOutContainer {
+  /* background-color: brown; */
+  grid-row: 1 / span 1;
+  grid-column: 3 / 3;
 }

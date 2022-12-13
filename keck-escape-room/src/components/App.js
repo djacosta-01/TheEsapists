@@ -30,19 +30,11 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        {!user ? (
-          <SignIn />
-        ) : (
-          <div>
-            <NavBar />
-            <SignOut />
-          </div>
-        )}
-      </header>
+      {!user ? "" : <NavBar />}
+      {!user ? <SignIn /> : <SignOut />}
       {!user ? "" : <GamePage username={user?.displayName} />}
       {!user ? "" : <LoadGame games={games} setGame={setGame} />}
-      {!user ? "" : <Game game={game} />}
+      {/* {!user ? "" : <Game game={game} />} */}
     </div>
   );
 }
