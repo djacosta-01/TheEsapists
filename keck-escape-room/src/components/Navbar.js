@@ -1,7 +1,10 @@
+import { SignOut } from "../services/authService";
+import "./NavBar.css";
 export default function NavBar() {
   return (
-    <nav>
+    <div id="nav-bar-container">
       <a href="#">Home</a>
-    </nav>
+      <a href="##">About</a>
+    </div>
   );
 }
