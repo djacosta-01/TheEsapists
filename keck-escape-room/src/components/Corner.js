@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Corner = () => {
+export default function Corner() {
     return (
         <div>
             <h4>You are standing in the corner.</h4>
@@ -8,5 +8,3 @@ const Corner = () => {
         </div>
     )
 }
-
-export default Corner;

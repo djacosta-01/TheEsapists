@@ -1,11 +1,10 @@
 import React from 'react';
 
-const Couches = () => {
+export default function Couches() {
     return (
         <div>
             <h4>You are standing by the couches.</h4>
+            <a href="server">Next Area</a>
         </div>
     )
 }
-
-export default Couches;

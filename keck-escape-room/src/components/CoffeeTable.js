@@ -1,11 +1,10 @@
 import React from 'react';
 
-const CoffeeTable = () => {
+export default function CoffeeTable() {
     return (
         <div>
             <h4>You are standing by the coffee table.</h4>
+            <a href="/">Home</a>
         </div>
     )
 }
-
-export default CoffeeTable;
