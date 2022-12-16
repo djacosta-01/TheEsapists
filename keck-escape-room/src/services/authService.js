@@ -6,7 +6,7 @@ import { auth } from '../firebaseConfig'
 export function SignIn() {
   return (
     <div id="signInContainer">
-      <p>Welcome! Enter below, if you dare. OK </p>
+      <p>Welcome! Enter below, if you dare.</p>
       <button onClick={() => signInWithPopup(auth, new GoogleAuthProvider())} id="logInButton">
         Enter the depths of the Keck Lab
       </button>
