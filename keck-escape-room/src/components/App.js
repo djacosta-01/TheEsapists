@@ -44,18 +44,19 @@ function App() {
       <Router>
         <Routes>
           {/* <Route exact path='/' exact element={<Home/>} /> */}
-          <Route path="/corner" element={<Corner />} />
-          <Route path="/couch" element={<Couch />} />
           <Route
-            path="/test"
+            path="/corner"
             element={
               <Location
                 mainText="You are standing in the corner."
                 enableJoke={true}
                 enableAlert={false}
+                alertText="A frog"
+                nextLink="/couch"
               />
             }
           />
+          <Route path="/couch" element={<Couch />} />
           <Route path="/server" element={<Server />} />
           <Route path="/coffee-table" element={<CoffeeTable />} />
         </Routes>
