@@ -83,7 +83,7 @@ button:hover {
 #signOutContainer {
   grid-row: 1 / span 1;
   grid-column: 3 / 3;
-  margin: 0 0 0 -6vw;
+  margin: 0 0 0 10vw;
   font-size: small;
   padding-right: 0vw;
   width: 29vw;
@@ -92,4 +92,9 @@ button:hover {
 #joke-container {
   font-size: 1.5vw;
   width: 35vw;
+}
+
+a {
+  color: teal;
+  text-align: center;
 }
