@@ -41,7 +41,7 @@ a {
 
 /* Game content */
 #game-container {
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
 }
 
 /* Map placement */
@@ -135,4 +135,9 @@ button:hover {
 #logInButton {
   height: 30vh;
   margin: auto;
+}
+
+/* Game Styles */
+#date {
+  margin-bottom: 1rem;
 }
