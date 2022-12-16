@@ -2,7 +2,7 @@ import React from 'react'
 import JokeGenerator from '../components/JokeGenerator'
 
 const Location = props => {
-  const { mainText, enableJoke, enableAlert, alertText, nextLink } = props
+  const { mainText, enableJoke, enableAlert, alertText, nextLink, end } = props
 
   return (
     <div id="right-sidebar">

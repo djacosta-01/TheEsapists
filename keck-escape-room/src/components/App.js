@@ -7,8 +7,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { SignIn, SignOut, useAuthentication } from '../services/authService'
 import { createNewGame, fetchGames } from '../services/gameService'
 import Location from '../containers/Location'
-import Game from './Game'
-import escapeRoom from '../images/location_corner.gif'
 
 function App() {
   const user = useAuthentication()
@@ -42,12 +40,11 @@ function App() {
 
       <Router>
         <Routes>
-          {/* <Route exact path='/' exact element={<Home/>} /> */}
           <Route
             path="/corner"
             element={
               <Location
-                mainText="You are standing in the corner."
+                mainText="You are standing in the corner. There are a few students in deep conversation."
                 enableJoke={true}
                 nextLink="/couch"
               />
@@ -57,7 +54,7 @@ function App() {
             path="/couch"
             element={
               <Location
-                mainText="You are standing by the couches."
+                mainText="You are standing by the couches. Julian is explaining code on the whiteboard."
                 enableAlert={true}
                 alertText="A frog"
                 nextLink="/server"
@@ -67,12 +64,20 @@ function App() {
           <Route
             path="/server"
             element={
-              <Location mainText="You are standing by the server." nextLink="/coffee-table" />
+              <Location
+                mainText="You are standing by the server. There are a lot of people in this area of the lab. Homework is probably due soon."
+                nextLink="/coffee-table"
+              />
             }
           />
           <Route
             path="/coffee-table"
-            element={<Location mainText="You are standing by the coffee table." nextLink="/" />}
+            element={
+              <Location
+                mainText="You are standing by the coffee table. The putting green is to your left, and there is a tea bag next to the empty kettle."
+                nextLink="/"
+              />
+            }
           />
         </Routes>
       </Router>

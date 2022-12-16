@@ -19,7 +19,7 @@ const JokeGenerator = () => {
         <Button callApi={fetchApi} />
       ) : (
         <p>
-          <span>Julian's cursed thought of the day:</span>
+          <span>Julian is creating overheards:</span>
           {joke}
         </p>
       )}
