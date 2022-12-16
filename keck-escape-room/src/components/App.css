@@ -10,6 +10,7 @@ body {
   grid-template-columns: auto auto auto;
   margin: 0;
   height: 100vh;
+  width: 100vw;
   background-color: black;
   background-image: radial-gradient(rgba(0, 120, 0, 1), black 80%);
   padding-top: 20px;
@@ -51,9 +52,26 @@ body {
   font: inherit;
 }
 
+button {
+  font-size: small;
+  font-family: inherit;
+  transition: 0.8s ease;
+  border-radius: 4px;
+  background-image: url("../images/codeGif.gif");
+  margin: 1vh 0 0 4vw;
+  height: 5vh;
+}
+
+button:hover {
+  color: white;
+  transition: 1s ease-out;
+}
+
 /* Sign Out */
 #signOutContainer {
   /* background-color: brown; */
   grid-row: 1 / span 1;
   grid-column: 3 / 3;
+  margin: 0 0 0 11vw;
+  font-size: small;
 }
