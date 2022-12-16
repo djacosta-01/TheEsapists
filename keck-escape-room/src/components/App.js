@@ -8,6 +8,7 @@ import { SignIn, SignOut, useAuthentication } from '../services/authService'
 import { createNewGame, fetchGames } from '../services/gameService'
 import Location from '../containers/Location'
 import Game from './Game'
+import escapeRoom from '../images/location_corner.gif'
 
 function App() {
   const user = useAuthentication()
