@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
 body {
   margin: 0;
@@ -29,7 +29,7 @@ a {
   background-image: radial-gradient(rgba(0, 120, 0, 1), black 80%);
   font-size: large;
   color: white;
-  font-family: "Press Start 2P";
+  font-family: 'Press Start 2P';
 }
 
 /* Load side bar */
@@ -59,10 +59,15 @@ a {
   justify-content: center;
   align-items: center;
   color: white;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   grid-row: 1 / span 1;
   grid-column: 2 / 2;
   font: inherit;
+}
+
+/* GamePage */
+#welcomeText {
+  margin-top: 1rem;
 }
 
 #right-sidebar {
@@ -84,7 +89,7 @@ button {
   font-family: inherit;
   transition: 0.8s ease;
   border-radius: 4px;
-  background-image: url("../images/codeGif.gif");
+  background-image: url('../images/codeGif.gif');
 }
 
 #sign-out-button {

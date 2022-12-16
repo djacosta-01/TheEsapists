@@ -1,20 +1,17 @@
-import { useState, useEffect } from "react";
-import "./authService.css";
-import { signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
-import { auth } from "../firebaseConfig";
+import { useState, useEffect } from 'react'
+import './authService.css'
+import { signInWithPopup, GoogleAuthProvider, signOut } from 'firebase/auth'
+import { auth } from '../firebaseConfig'
 
 export function SignIn() {
   return (
     <div id="signInContainer">
-      <p>Welcome! Enter below, if you dare. </p>
-      <button
-        onClick={() => signInWithPopup(auth, new GoogleAuthProvider())}
-        id="logInButton"
-      >
+      <p>Welcome! Enter below, if you dare. OK </p>
+      <button onClick={() => signInWithPopup(auth, new GoogleAuthProvider())} id="logInButton">
         Enter the depths of the Keck Lab
       </button>
     </div>
-  );
+  )
 }
 
 export function SignOut() {
@@ -25,15 +22,16 @@ export function SignOut() {
         Sign Out
       </button>
     </div>
-  );
+  )
 }
 
 export function useAuthentication() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(null)
   useEffect(() => {
-    return auth.onAuthStateChanged((user) => {
-      user ? setUser(user) : setUser(null);
-    });
-  }, []);
-  return user;
+    console.log('AUTH SERVICE > USE EFFECT > returning auth state changed')
+    return auth.onAuthStateChanged(user => {
+      user ? setUser(user) : setUser(null)
+    })
+  }, [])
+  return user
 }

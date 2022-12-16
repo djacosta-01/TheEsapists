@@ -4,10 +4,6 @@ import GamePage from './GamePage'
 import NavBar from './Navbar'
 import LoadGame from '../services/LoadGame'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Corner from './Corner'
-import Couch from './Couch'
-import Server from './Server'
-import CoffeeTable from './CoffeeTable'
 import { SignIn, SignOut, useAuthentication } from '../services/authService'
 import { createNewGame, fetchGames } from '../services/gameService'
 import Location from '../containers/Location'
@@ -17,6 +13,8 @@ function App() {
   const [games, setGames] = useState([])
   const [game, setGame] = useState(null)
   const [newGame, setNewGame] = useState(false)
+
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     if (user) {
@@ -33,14 +31,15 @@ function App() {
     })
   }
 
+  console.log('APP > RETURN / RENDER')
+
   return (
     <div className="App">
       {!user ? '' : <NavBar />}
       {!user ? <SignIn /> : <SignOut />}
       {!user ? '' : <GamePage username={user?.displayName} />}
       {!user ? '' : <LoadGame games={games} setGame={setGame} />}
-      {/* {!user ? "" : <JokeGenerator />} */}
-      {/* {!user ? "" : <Game game={game} />} */}
+
       <Router>
         <Routes>
           {/* <Route exact path='/' exact element={<Home/>} /> */}
@@ -48,17 +47,34 @@ function App() {
             path="/corner"
             element={
               <Location
+                loading={loading}
                 mainText="You are standing in the corner."
                 enableJoke={true}
-                enableAlert={false}
-                alertText="A frog"
                 nextLink="/couch"
               />
             }
           />
-          <Route path="/couch" element={<Couch />} />
-          <Route path="/server" element={<Server />} />
-          <Route path="/coffee-table" element={<CoffeeTable />} />
+          <Route
+            path="/couch"
+            element={
+              <Location
+                mainText="You are standing by the couches."
+                enableAlert={true}
+                alertText="A frog"
+                nextLink="/server"
+              />
+            }
+          />
+          <Route
+            path="/server"
+            element={
+              <Location mainText="You are standing by the server." nextLink="/coffee-table" />
+            }
+          />
+          <Route
+            path="/coffee-table"
+            element={<Location mainText="You are standing by the coffee table." nextLink="/" />}
+          />
         </Routes>
       </Router>
     </div>
