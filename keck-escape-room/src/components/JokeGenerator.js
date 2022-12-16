@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Button from './Button'
 
 const URL =
@@ -8,7 +8,6 @@ const JokeGenerator = () => {
   const [joke, setJoke] = useState('')
 
   const fetchApi = () => {
-    console.log('CALLING FETCH')
     fetch(URL)
       .then(res => res.json())
       .then(data => setJoke(data.joke))

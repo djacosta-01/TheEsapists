@@ -14,15 +14,13 @@ function App() {
   const [game, setGame] = useState(null)
   const [newGame, setNewGame] = useState(false)
 
-  const [loading, setLoading] = useState(true)
-
   useEffect(() => {
     if (user) {
       fetchGames().then(setGames)
     }
   }, [user])
 
-  // Updates the database, then updates the internal React state
+  // TODO: Future feature
   function addGame({ title }) {
     createNewGame({ title }).then(game => {
       setGame(game)
@@ -30,8 +28,6 @@ function App() {
       setNewGame(false)
     })
   }
-
-  console.log('APP > RETURN / RENDER')
 
   return (
     <div className="App">
@@ -47,7 +43,6 @@ function App() {
             path="/corner"
             element={
               <Location
-                loading={loading}
                 mainText="You are standing in the corner."
                 enableJoke={true}
                 nextLink="/couch"

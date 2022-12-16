@@ -28,7 +28,6 @@ export function SignOut() {
 export function useAuthentication() {
   const [user, setUser] = useState(null)
   useEffect(() => {
-    console.log('AUTH SERVICE > USE EFFECT > returning auth state changed')
     return auth.onAuthStateChanged(user => {
       user ? setUser(user) : setUser(null)
     })
