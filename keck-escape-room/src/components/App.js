@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { SignIn, SignOut, useAuthentication } from '../services/authService'
 import { createNewGame, fetchGames } from '../services/gameService'
 import Location from '../containers/Location'
+import Game from './Game'
 
 function App() {
   const user = useAuthentication()
@@ -19,6 +20,8 @@ function App() {
       fetchGames().then(setGames)
     }
   }, [user])
+
+  useEffect(() => {}, [games])
 
   // TODO: Future feature
   function addGame({ title }) {
