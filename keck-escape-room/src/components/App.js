@@ -42,7 +42,6 @@ function App() {
       {/* {!user ? "" : <Game game={game} />} */}
       <Router>
         <Routes>
-          {/* <Route exact path='/' exact element={<Home/>} /> */}
           <Route path='/corner' element={<Corner/>}/> 
           <Route path='/couch' element={<Couch/>}/> 
           <Route path='/server' element={<Server/>}/> 
