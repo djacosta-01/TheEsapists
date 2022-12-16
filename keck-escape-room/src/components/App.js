@@ -2,11 +2,16 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import GamePage from "./GamePage";
 import NavBar from "./Navbar";
-import JokeGenerator from "./jokeAPI.js";
 import LoadGame from "../services/LoadGame";
 import Game from "./Game";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Corner from "./Corner";
+import Couch from "./Couch";
+import Server from "./Server";
+import CoffeeTable from "./CoffeeTable";
 import { SignIn, SignOut, useAuthentication } from "../services/authService";
 import { createNewGame, fetchGames } from "../services/gameService";
+import JokeGenerator from "./jokeAPI";
 
 function App() {
   const user = useAuthentication();
@@ -35,8 +40,17 @@ function App() {
       {!user ? <SignIn /> : <SignOut />}
       {!user ? "" : <GamePage username={user?.displayName} />}
       {!user ? "" : <LoadGame games={games} setGame={setGame} />}
-      {!user ? "" : <JokeGenerator />}
+      {/* {!user ? "" : <JokeGenerator />} */}
       {/* {!user ? "" : <Game game={game} />} */}
+      <Router>
+        <Routes>
+          {/* <Route exact path='/' exact element={<Home/>} /> */}
+          <Route path="/corner" element={<Corner />} />
+          <Route path="/couch" element={<Couch />} />
+          <Route path="/server" element={<Server />} />
+          <Route path="/coffee-table" element={<CoffeeTable />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

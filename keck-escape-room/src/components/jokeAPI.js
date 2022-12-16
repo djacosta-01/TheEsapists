@@ -15,7 +15,9 @@ const JokeGenerator = () => {
 
   const fetchApi = () => {
     // Fetching data from the API
-    fetch("https://sv443.net/jokeapi/v2/joke/Programming?type=single")
+    fetch(
+      "https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single"
+    )
       .then((res) => res.json())
       .then((data) => setJoke(data.joke));
   };
@@ -23,7 +25,14 @@ const JokeGenerator = () => {
   return (
     // Return the Button Component with a conditional statement
     <div id="joke-container">
-      {Joke === "" ? <Button callApi={fetchApi} /> : <p>{Joke}</p>}
+      {Joke === "" ? (
+        <Button callApi={fetchApi} />
+      ) : (
+        <p>
+          <p>Julian's cursed thought of the day: </p>
+          {Joke}
+        </p>
+      )}
     </div>
   );
 };

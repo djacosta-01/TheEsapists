@@ -90,5 +90,6 @@ button:hover {
 }
 
 #joke-container {
-  font-size: 2vw;
+  font-size: 1.5vw;
+  width: 35vw;
 }
