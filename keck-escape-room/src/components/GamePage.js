@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import NavBar from "./Navbar";
-import escapeRoom from "../images/escapeRoom.png";
+import escapeRoom from "../images/location_corner.gif";
 import "./GamePage.css";
 import { SignOut } from "../services/authService";
 

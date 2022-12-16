@@ -58,8 +58,20 @@ button {
   transition: 0.8s ease;
   border-radius: 4px;
   background-image: url("../images/codeGif.gif");
-  margin: 1vh 0 0 4vw;
+}
+
+#sign-out-button {
+  margin: 1vh 0 0 0vw;
+  padding: 0;
   height: 5vh;
+  width: 10vw;
+}
+
+Button {
+  height: 8vh;
+  width: 10vw;
+  margin-left: 4vw;
+  font-size: 1.6vh;
 }
 
 button:hover {
@@ -67,11 +79,16 @@ button:hover {
   transition: 1s ease-out;
 }
 
-/* Sign Out */
+/*Sign Out */
 #signOutContainer {
-  /* background-color: brown; */
   grid-row: 1 / span 1;
   grid-column: 3 / 3;
-  margin: 0 0 0 11vw;
+  margin: 0 0 0 -6vw;
   font-size: small;
+  padding-right: 0vw;
+  width: 29vw;
+}
+
+#joke-container {
+  font-size: 2vw;
 }

@@ -2,6 +2,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import GamePage from "./GamePage";
 import NavBar from "./Navbar";
+import JokeGenerator from "./jokeAPI.js";
 import LoadGame from "../services/LoadGame";
 import Game from "./Game";
 import { SignIn, SignOut, useAuthentication } from "../services/authService";
@@ -34,6 +35,7 @@ function App() {
       {!user ? <SignIn /> : <SignOut />}
       {!user ? "" : <GamePage username={user?.displayName} />}
       {!user ? "" : <LoadGame games={games} setGame={setGame} />}
+      {!user ? "" : <JokeGenerator />}
       {/* {!user ? "" : <Game game={game} />} */}
     </div>
   );
