@@ -4,11 +4,13 @@ import { useState, useEffect } from "react";
 
 const Corner = () => {
   return (
-    <div>
+    <div id="right-sidebar">
       <h4>You are standing in the corner.</h4>
       {<JokeGenerator />}
-      <p>
-        <a href="couch">Next Area</a>
+      <p className="links">
+        <a id="next-link" href="couch">
+          Next Area
+        </a>
       </p>
     </div>
   );

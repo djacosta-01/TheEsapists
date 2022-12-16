@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import GamePage from "./GamePage";
 import NavBar from "./Navbar";
 import LoadGame from "../services/LoadGame";
-import Game from "./Game";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Corner from "./Corner";
 import Couch from "./Couch";
@@ -11,7 +10,6 @@ import Server from "./Server";
 import CoffeeTable from "./CoffeeTable";
 import { SignIn, SignOut, useAuthentication } from "../services/authService";
 import { createNewGame, fetchGames } from "../services/gameService";
-import JokeGenerator from "./jokeAPI";
 
 function App() {
   const user = useAuthentication();
