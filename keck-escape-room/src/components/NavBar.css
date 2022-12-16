@@ -3,3 +3,11 @@
   font-family: "Courier New", Courier, monospace;
   background-color: lightgreen;
 } */
+div #nav-bar-container {
+  color: black;
+}
+
+a {
+  margin: 0 4.5vw 0 4.5vw;
+  font: inherit;
+}

@@ -40,7 +40,6 @@ body {
 
 /* Nav Bar */
 #nav-bar-container {
-  background-color: aqua;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,6 +47,8 @@ body {
   font-family: "Courier New", Courier, monospace;
   grid-row: 1 / span 1;
   grid-column: 2 / 2;
+  margin: 0 4.5vw 0 4.5vw;
+  font: inherit;
 }
 
 /* Sign Out */
