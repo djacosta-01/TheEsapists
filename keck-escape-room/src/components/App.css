@@ -8,6 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
+  width: 100vw;
   height: 100vh;
   justify-content: flex-start;
   align-items: center;
@@ -21,9 +22,9 @@ body {
 
 .signOutContainer {
   display: flex;
-  justify-content: flex-end;
-  margin-left: 1200px;
+  margin: 0 0 0 67vw;
   font-size: small;
+  height: 5vh;
 }
 
 button {

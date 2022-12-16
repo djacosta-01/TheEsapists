@@ -1,13 +1,8 @@
-/* div #nav-header {
-  background-color: aqua;
-
-} */
-
 div #nav-bar-container {
   color: black;
 }
 
 a {
-  margin: 100px;
+  margin: 9vw;
   font: inherit;
 }
