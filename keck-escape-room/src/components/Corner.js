@@ -1,6 +1,5 @@
-import React from "react";
-import JokeGenerator from "./jokeAPI";
-import { useState, useEffect } from "react";
+import React from 'react'
+import JokeGenerator from './jokeAPI'
 
 const Corner = () => {
   return (
@@ -13,7 +12,7 @@ const Corner = () => {
         </a>
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default Corner;
+export default Corner
